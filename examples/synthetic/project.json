@@ -1,0 +1,74 @@
+{
+  "samples": {
+    "path": "C:\\Projects\\SuperVario\\examples\\synthetic\\samples.csv",
+    "xyz": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "value": "grade",
+    "sheet": "",
+    "format": {
+      "sep": "",
+      "decimal": "",
+      "header_line": 0
+    }
+  },
+  "domains": {
+    "kind": "blocks",
+    "path": "C:\\Projects\\SuperVario\\examples\\synthetic\\blocks.csv",
+    "domain": "domain",
+    "xyz": [
+      "X",
+      "Y",
+      "Z"
+    ],
+    "size_cols": [
+      "DX",
+      "DY",
+      "DZ"
+    ],
+    "sheet": "",
+    "format": {
+      "sep": "",
+      "decimal": "",
+      "header_line": 0
+    },
+    "solids": [],
+    "repair": "none",
+    "voxel_pitch": 5.0,
+    "max_voxels": 2000000
+  },
+  "filters": [
+    {
+      "field": "quality",
+      "type": "categorical",
+      "values": [
+        "good"
+      ]
+    },
+    {
+      "field": "BM:active",
+      "type": "numeric",
+      "min": 1
+    }
+  ],
+  "variogram": {
+    "bins": 12,
+    "lag": 0,
+    "max_distance": 65,
+    "angle_tolerance": 30,
+    "min_pairs": 5,
+    "max_samples": 5000,
+    "max_pairs": 300000,
+    "structures": 1,
+    "seed": 1729,
+    "rotation": null
+  },
+  "boundaries": {
+    "distance": 25.0,
+    "min_samples": 20,
+    "approved_pairs": []
+  },
+  "output": "C:\\Projects\\SuperVario\\examples\\synthetic\\output"
+}
