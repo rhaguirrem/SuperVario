@@ -19,8 +19,8 @@ py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
-The application currently reuses source modules in the sibling local projects
-`SRKReliability`, `MeshOps`, and `Anterpolator`. It is **not a standalone executable**.
+The application currently relies on local table-reading/filtering modules and
+the sibling projects `MeshOps` and `Anterpolator`. It is **not a standalone executable**.
 Keep their directory layout, or set `SUPERVARIO_PROJECTS` to their common parent
 folder. Their source files and environments are not modified.
 
@@ -57,7 +57,7 @@ explanations of their purpose and limits.
    - Solids: add one file per domain; edit the domain names in the table.
      Formats include DXF triangulations, Leapfrog MSH, supported Vulcan 00t
      variants, and trimesh formats such as STL/OBJ/PLY.
-3. Edit filters using the existing SRKReliability filter dialog. It supports
+3. Edit filters using the filter dialog. It supports
    categorical include/exclude, numeric bounds, present values, expressions and
    explicit blank handling. `BM:<field>` means the attribute of the block
    containing the sample. Filters are AND-combined and applied after flagging.
@@ -321,7 +321,7 @@ Analysis/LFV exports also protect the loaded and saved project files.
 
 ## File handling and domain assignment
 
-- CSV reading reuses SRKReliability's separator, decimal-mark, encoding and
+- CSV reading supports separator, decimal-mark, encoding and
   Leapfrog metadata handling. Blank format fields select detection. A header-row
   override is **1-based**; `0` means automatic first non-comment header. Arbitrary
   prose before the header needs an explicit row. Quoted headers are supported.
